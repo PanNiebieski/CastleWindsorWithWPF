@@ -1,0 +1,20 @@
+﻿<Window x:Class="CastleWindsorWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CastleWindsorWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <Label  Content="{Binding MainLabel.Text}" FontSize="{Binding MainLabel.Size}"   />
+        <Label  Content="{Binding SubLabel.Text}" FontSize="{Binding SubLabel.Size}"   />
+
+        <TextBox Text="{Binding Parameters.A, Mode=TwoWay}" />
+        <TextBox Text="{Binding Parameters.B, Mode=TwoWay}" />
+
+        <Button Command="{Binding Methods.Add}" Content="Dodaj" />
+        <Button Command="{Binding Methods.Multi}" Content="Mnóż" />
+        <TextBlock  Text="{Binding Parameters.Result, Mode=TwoWay}"   />
+    </StackPanel>
+</Window>
